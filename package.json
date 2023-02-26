@@ -1,6 +1,6 @@
 {
   "name": "react-before-after-image",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Before after image slider component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -8,7 +8,7 @@
     "build-storybook": "build-storybook"
   },
   "author": "Arnaud Zago",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -46,5 +46,16 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zagoa/react-before-after-image.git"
+  },
+  "homepage": "https://github.com/zagoa/react-before-after-image",
+  "keywords": [
+    "react-component",
+    "react",
+    "before-after",
+    "image"
+  ]
 }
