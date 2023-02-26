@@ -9,5 +9,13 @@ A before after visualizer component for React
 ## Installation 
 `npm i react-before-after-image`
 
+## Usage
+| props             | type       |
+|-------            |------      |
+|backgroundImg      |string      |
+|foregroundImg      |string  \| undefined|
+|bgColor?           |string      |
+|defaultRangeValue? |number      |
+
 ## License 
 See the [License](LICENSE) file.

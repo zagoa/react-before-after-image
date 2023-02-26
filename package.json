@@ -1,6 +1,6 @@
 {
   "name": "react-before-after-image",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Before after image slider component library",
   "scripts": {
     "rollup": "rollup -c",

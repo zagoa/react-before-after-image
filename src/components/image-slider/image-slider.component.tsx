@@ -10,8 +10,9 @@ type ImageSliderComponentProps = {
 	defaultRangeValue?: number;
 };
 
+const DEFAULT_RANGE = 25;
+
 const ImageSliderComponent = (props: ImageSliderComponentProps) => {
-	const DEFAULT_RANGE = 25;
 
 	useEffect(() => {
 		getNewValue({target: {value: `${props.defaultRangeValue ?? DEFAULT_RANGE}`}} as ChangeEvent<HTMLInputElement>)
