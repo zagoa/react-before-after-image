@@ -1,7 +1,6 @@
 import "./image-slider.scss";
-import {ChangeEvent, useEffect} from "react";
+import React, {ChangeEvent, useEffect} from "react";
 import {css} from "@emotion/react";
-import React from "react";
 
 type ImageSliderComponentProps = {
 	backgroundImg: string;
