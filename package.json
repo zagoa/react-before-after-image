@@ -1,0 +1,50 @@
+{
+  "name": "react-before-after-image",
+  "version": "0.0.1",
+  "description": "Before after image slider component library",
+  "scripts": {
+    "rollup": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "Arnaud Zago",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.28",
+    "babel-loader": "^8.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.17.3",
+    "rollup-plugin-dts": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook-addon-sass-postcss": "^0.1.3",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "sass": "^1.58.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
