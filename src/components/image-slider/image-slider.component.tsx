@@ -1,5 +1,5 @@
 import "./image-slider.scss";
-import {ChangeEvent} from "react";
+import {ChangeEvent, useEffect} from "react";
 import {css} from "@emotion/react";
 import React from "react";
 
@@ -11,16 +11,22 @@ type ImageSliderComponentProps = {
 };
 
 const ImageSliderComponent = (props: ImageSliderComponentProps) => {
+	const DEFAULT_RANGE = 25;
+
+	useEffect(() => {
+		getNewValue({target: {value: `${props.defaultRangeValue ?? DEFAULT_RANGE}`}} as ChangeEvent<HTMLInputElement>)
+	}, [])
+
 	function getNewValue(event: ChangeEvent<HTMLInputElement>) {
 		const sliderPos = event?.target.value;
 		// Update the width of the foreground image
 		const slider = document.getElementsByClassName("foreground-img")[0];
-		const sliderButton = document.getElementsByClassName("slider-button")[0];
+		//const sliderButton = document.getElementsByClassName("slider-button")[0];
 		slider.setAttribute(
 			"style",
 			`clip-path: polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100% )`,
 		);
-		sliderButton.setAttribute("style", `left: calc(${sliderPos}% - 16px)`);
+		//sliderButton.setAttribute("style", `left: calc(${sliderPos}% - 16px)`);
 	}
 
 	return (
@@ -31,13 +37,12 @@ const ImageSliderComponent = (props: ImageSliderComponentProps) => {
 			<img
 				src={props.foregroundImg}
 				className={"foreground-img"}
-				css={css`clip-path: polygon(0 0, 25% 0,25% 100%, 0 100% )`}
 			/>
 			<input
 				onChange={getNewValue}
 				min={0}
 				max={100}
-				defaultValue={props.defaultRangeValue ?? 25}
+				defaultValue={props.defaultRangeValue ?? DEFAULT_RANGE}
 				type="range"
 				className="slider"
 				name='slider'
